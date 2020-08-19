@@ -27,12 +27,22 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener {
 
         val securityPreferences = SecurityPreferences(this)
         securityPreferences.storeString("", "")
+        verifyName()
     }
 
     override fun onClick(view: View) {
         val id = view.id
         if(id == R.id.buttonSave) {
             handleSave()
+        }
+    }
+
+    private fun verifyName() {
+        val name = mSecurityPreferences.getString(MotivationConstants.KEY.PERSON_NAME)
+        if(name != "") {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 
@@ -45,7 +55,7 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener {
             // de um jeito
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-
+            finish()
             // de outro jeito
 //            startActivity(Intent(this, MainActivity::class.java))
         }else {

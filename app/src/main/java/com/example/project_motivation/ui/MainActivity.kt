@@ -7,6 +7,7 @@ import com.example.project_motivation.R
 import com.example.project_motivation.Repository.Mock
 import com.example.project_motivation.infra.SecurityPreferences
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_splash.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -22,7 +23,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
 
         mSecurityPreferences = SecurityPreferences(this)
-        textName.text = mSecurityPreferences.getString(MotivationConstants.KEY.PERSON_NAME)
+        val name = mSecurityPreferences.getString(MotivationConstants.KEY.PERSON_NAME)
+        textName.text = "Olá, $name!"
 
         // Lógica inicial de seleção
         imageAll.setColorFilter(resources.getColor(R.color.colorAccent))
