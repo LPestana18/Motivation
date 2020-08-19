@@ -40,7 +40,7 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener {
         val name = editName.text.toString()
 
         if(name != ""){
-            mSecurityPreferences.storeString("name", name)
+            mSecurityPreferences.storeString(MotivationConstants.KEY.PERSON_NAME, name)
 
             // de um jeito
             val intent = Intent(this, MainActivity::class.java)
