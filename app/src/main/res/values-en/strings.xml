@@ -1,11 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="salvar">Save</string>
+    <string name="start">Let\'s get started ?</string>
+    <string name="qual_seu_nome">What\'s your name ?</string>
     <string name="app_name">Motivation</string>
-    <string name="start">Vamos começar?</string>
+
+
     <string name="nova_frase">Nova frase</string>
-    <string name="qual_seu_nome">Qual seu nome?</string>
     <string name="usuario">Usuário</string>
     <string name="frase">Frase</string>
-    <string name="salvar">Salvar</string>
     <string name="vamos_começar">Vamos começar?</string>
     <string name="todas_as_frases">Todas as frases</string>
     <string name="frases_de_motivação">Frases de motivação</string>
